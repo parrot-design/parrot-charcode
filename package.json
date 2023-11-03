@@ -1,6 +1,6 @@
 {
   "name": "@parrotjs/charcodes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "一个字符集合",
   "main": "dist/parrotcharcodes.cjs.js",
   "module": "dist/parrotcharcodes.esm.js",
