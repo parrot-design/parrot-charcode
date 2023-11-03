@@ -7,7 +7,11 @@
   "umd": "dist/parrotcharcodes.umd.js",
   "umdName": "ParrotCharcodes",
   "scripts": {
-    "test": "node html/express.js"
+    "dev": "node html/server.js",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "prepub": "npm run build",
+    "pub": "sh release.sh"
   },
   "repository": {
     "type": "git",
@@ -21,8 +25,17 @@
   },
   "homepage": "https://github.com/parrot-design/parrot-charcodes#readme",
   "devDependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
+    "rollup": "^4.2.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.36.0"
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-loader": "^9.5.0",
+    "tslint": "^6.1.3",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-dev-middleware": "^6.1.1",
+    "webpack-hot-middleware": "^2.25.4"
   }
 }
